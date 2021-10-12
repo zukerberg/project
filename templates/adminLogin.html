@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link rel="shortcut icon" href="../static/icons8-admin-64.png" type="image/png">
+    <link rel="stylesheet" href="../static/stylesample.css" />
+  </head>
+  <body>
+    {% if msg %}
+      <script>alert("{{msg}}")</script>
+    {% endif %}
+    <div class="container">
+      <h1>Analytics Window</h1>
+
+      <form action="/results" method="POST" enctype="multipart/form-data">
+        <div class="form-control">
+          <label for="block">Select block:</label>
+          <select id="block" name="block">
+            <option value="None"></option>
+            <option value="Block 1">Block 1</option>
+            <option value="Block 2">Block 2</option>
+            <option value="Block 3">Block 3</option>  
+            <option value="All">Select All</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="floor">Select floor:</label>
+          <select id="floor" name="floor">
+            <option value="None"></option>
+            <option value="Ground">Ground</option>
+            <option value="Floor 1">Floor 1</option>
+            <option value="Floor 2">Floor 2</option>
+            <option value="Floor 3">Floor 3</option>
+            <option value="All Floor">Select All</option>
+          </select>
+        </div>
+        <div class="form-control">
+          <label for="type">Select washroom type:</label>
+          <select id="type" name="type">
+            <option value="None"></option>
+            <option value="male staff">Male staff</option>
+            <option value="female staff">Female staff</option>
+            <option value="Both">Select Both</option>
+          </select>
+        </div>
+        <div class="form-control block">
+          <div class="form-control-inside">
+            <label for="startdate">Start Date</label>
+            <input type="" name="startdate" value="" id="startdate"/>
+          </div>
+          <div class="form-control-inside">
+            <label for="enddate">End Date</label>
+            <input type="" name="enddate" value="" id="enddate"/>
+          </div>
+        </div>
+
+        <button class="btn" type="button">Submit</button>
+      </form>
+    </div>
+    <script src="../static/sample.js"></script>
+  </body>
+</html>

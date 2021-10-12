@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../static/showAllStyle.css">
+    <link rel="shortcut icon" href="../static/feedback.png" type="image/x-icon" />
+</head>
+<body>
+    <script>
+        alert("{{message}}");
+    </script>
+    <h1>All Comparison</h1>
+    <h4>
+        From: {{dates[0]}} ➤ End: {{dates[1]}}
+    </h4>
+    <div class="container">
+        <div class="image-container .active">
+            <h3 class="title">
+                Cleanliness
+            </h3>
+            <div class="img">
+            <img src="../static/mplots0.jpg" alt="plot" />
+            </div>
+            <button class="img-toggle"> 
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i> 
+            </button>
+        </div>
+        <div class="image-container">
+            <h3 class="title">
+                Water Supply
+            </h3>
+            <div class="img">
+            <img src="../static/mplots1.jpg" alt="plot" />
+            </div>
+            <button class="img-toggle"> 
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i> 
+            </button>
+        </div>
+        <div class="image-container">
+            <h3 class="title">
+                Light Condition
+            </h3>
+            <div class="img">
+            <img src="../static/mplots2.jpg" alt="plot" />
+            </div>
+            <button class="img-toggle"> 
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i> 
+            </button>
+        </div>
+        <div class="image-container">
+            <h3 class="title">
+                Smell
+            </h3>
+            <div class="img">
+            <img src="../static/mplots3.jpg" alt="plot" />
+            </div>
+            <button class="img-toggle"> 
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-times"></i> 
+            </button>
+        </div>
+    </div>
+    <div id="table" class="hide">{{html}}</div>
+    <div id='btn-cont'><button id="btn">Require Attention</button></div>
+    
+    <script src="../static/showAll.js"></script>
+
+</body>
+</html>
