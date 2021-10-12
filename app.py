@@ -106,6 +106,7 @@ def single():
             blck = df['Select block'].unique().tolist()
             flor = df['Select floor'].unique().tolist()
             types = df['Select washroom'].unique().tolist()
+            # Cleanliness
             category = ['Cleanliness', 'Water Supply', 'Light Condition', 'Smell']
             avg_of_all = {}
             m_plot_data = {}
