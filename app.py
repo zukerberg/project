@@ -32,7 +32,7 @@ scopes = [
 "https://www.googleapis.com/auth/drive.file"
 ]
 # get credentials
-credentials = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scopes)    # access the json key you downloaded earlier 
+credentials = ServiceAccountCredentials.from_json_keyfile_name("./config/credentials.json", scopes)    # access the json key you downloaded earlier 
 
 # storing data in json format
 now = datetime.datetime.now()                  # now = 2021-06-25 07:58:56.550604
