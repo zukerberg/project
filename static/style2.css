@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Muli',sans-serif;
+    display:flex;
+    align-items: center;    /*align item perpendicular to direction*/
+    justify-content: center;        /*justify item in flex direction*/
+    /* height:100vh; */
+    /* overflow: hidden; */
+    margin:0;
+    /*width:50vw; this make width from starting 50 after that item will be align with respect to 50 vw;*/
+}
+
+
+.container{
+    display: flex;/* direct childern in row as flex direction by default is row*/
+    width:90vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height:60vh;
+    border-radius: 20px;
+    color:white;
+    cursor:pointer;
+    margin:10px;
+    padding:10px;
+    width: 100px;
+    transition: width 0.6s ease-in;
+}
+h3{
+    font-size: 20px;
+    position: absolute;
+    top:180px;
+    left:10px;
+    color:white;
+    transform: rotate(-90deg);
+}
+.active{
+    width:500px;
+}
+.active h3{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.row2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row2 button{
+    height:35px;
+    width:180px;
+    margin:20px;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    background-image: linear-gradient(to right,rgb(149, 10, 241),rgb(136, 24, 136) );
+    color:white;
+    font-size:18px;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+.row2 button:hover{
+    cursor: pointer;
+    transform: scale(0.98);
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    background-image: linear-gradient(to right,rgb(153, 0, 255),rgb(156, 16, 156) );
+
+}
+
+
+.hide{
+    display: none;
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.images img{
+    width:450px;
+    height:450px;
+    border-radius: 30px;
+    margin:20px;
+}
+
+figure {
+    max-width: 500px;
+  }
+  
+figcaption {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    font-weight: 600;
+    text-align: cventer;
+    margin: auto;
+    padding: 15px;
+  }
+  .show{
+      display: block;
+  }
+  table{
+     
+
+      width:90%;
+      margin:30px auto;
+      border-radius: 10px;
+      border:2px solid black;
+  }
+
+  table tr{
+    border-collapse: collapse;
+      width:100%;
+  }
+  table th{
+    border-collapse: collapse;
+    text-align: center;
+    width:500px;
+    padding:8px;
+    background-color: #000;
+    color:white;
+  }
+  table td{
+    border-collapse: collapse;
+      text-align: center;
+      padding:8px;
+  }
+  th{
+      width:100px;
+  }
+  table tbody th{
+      width:400px;
+  }
+  
