@@ -87,7 +87,7 @@ def single():
             all_data = sheet.get_all_records()
             df = pd.DataFrame(all_data)
         except Exception as e:
-            return "Could not fetch data from server\n" + e
+            return "Could not fetch data from server"
         # label encoding of categorical data
         df = calculate.label_encode(df)
         # filter condition based on values of data recieved
