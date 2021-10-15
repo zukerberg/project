@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: steelblue;
+    background-image: url('');
     color:#fff;
     font-family: 'Muli',sans-serif;
     margin:0;
@@ -19,8 +19,15 @@ body{
 }
 .container{
     background-color: rgba(0,0,0,0.4);
-    padding:20px 40px;
+    margin:5px;
+    /* padding:20px 40px; */
+    padding-bottom: 30px;
     border-radius: 5px;
+    padding-left: 10px;
+    padding-right:10px;
+    min-width:250px;
+    max-width: 380px;
+    width:80vw;
 }
 .container h1{
     text-align: center;
@@ -58,21 +65,21 @@ body{
 }
 .form-control{
     position: relative;
-    margin:20px 0 40px;
-    width:350px;
+    margin:20px auto;
+    width:90%;
 
 }
 .form-control.block{
     display: flex;
     flex-direction: row;
-    margin:20px 0 40px;
-    width:350px;
+
+    width:90%;
     justify-content: space-between;
 
 }
 .form-control-inside{
     position: relative;
-    width:170px;
+    width:50%;
 }
 
 .form-control-inside input{
