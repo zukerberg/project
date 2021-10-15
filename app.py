@@ -17,7 +17,7 @@ mail = Mail(app)              # instantiate the mail class
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'feedbackmonitor123@gmail.com'
-app.config['MAIL_PASSWORD'] = 'puadmin@1'
+app.config['MAIL_PASSWORD'] = 'puadmin@123'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_ASCII_ATTACHMENTS'] = True
@@ -243,7 +243,7 @@ def single():
                     textcoords='offset points', fontsize = 16 , fontweight = 'medium')
                 plt.savefig(f'./static/plot{idx}.jpg')
             try:
-                msg = Message(f'WASHROOM: FEEDBACK ANALYSIS {dt_string2}', sender = 'gautamue195051ece@gmail.com', recipients = ['gautamue195051ece@gmail.com'])
+                msg = Message(f'WASHROOM: FEEDBACK ANALYSIS {dt_string2}', sender = 'feedbackmonitor123@gmail.com', recipients = ['feedbackmonitor123@gmail.com'])
                 msg.body = f"FEEDBACK ANALYSIS:\n\n{report_title}\n\n" + f"Start Date: {s_date}\nEnd Date: {e_date}\n" + "--"*30 + "\n\n" + f"Overall Cleanliness Rating: {mean_1}\n Overall Water Supply Rating: {mean_2}\n Overall Light Condition Rating: {mean_3}\n Overall Smell Rating: {mean_4}\n\n Overall Rating of the washroom on the scale of 1 to 5: {overall_score}\n\n Comments of the people are: {cmnts}"
                 mail.send(msg)
                 return render_template('SingleCategoryPage.html', title = report_title , text = desc , html = html , dates = [s_date , e_date] , message = 'Feedback Report mail successfully sent to Admin!!')
